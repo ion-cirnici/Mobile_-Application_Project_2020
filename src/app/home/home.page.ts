@@ -1,12 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {NewsService} from '../Services/news.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+NewsStories:any
+  constructor(private newsService:NewsService) {
 
-  constructor() {}
+
+  }
+
+ngOnInit() {
+  this.newsService.GetLatestNewsStories().subscribe(
+    (data)=>{
+      this.NewsStories = data.aricles;
+    }
+  );
+}
 
 }
