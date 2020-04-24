@@ -1,9 +1,57 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>accessory</ion-title>
+    <ion-title>Accessory</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+
+<!-- Danger back button next to a menu button -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons (click)="myAction()" href="../home">
+      <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+ 
+  <br><br> 
+  
+
+  <div class="button" ><ion-button class="size" size="large" shape="round" (click)="lightMethod()">Tourch</ion-button></div>
+  <br><br>
+  <div class="button" ><ion-button class="size" size="large" shape="round" (click)="myCamera()">Camera</ion-button></div>
+  <p><img src="{{ myPhotos }}"></p> 
+
+    
 </ion-content>
+
+<ion-content padding>
+ 
+  <!--this is for social media share message file link and subject but is not fully working
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngMOdel)]="message" placeholder="Enter message"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngMOdel)]="file" placeholder="Enter file"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngMOdel)]="link" placeholder="Enter link"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngMOdel)]="subject" placeholder="Enter subject"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button ion-button full (click)="share()">Share</button>
+    </ion-item>
+
+  </ion-list>
+  
+    
+</ion-content>
+-->

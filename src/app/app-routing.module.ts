@@ -5,14 +5,22 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   
-  {
-    path: 'holiday',
-    loadChildren: () => import('./holiday/holiday.module').then( m => m.HolidayPageModule)
-  },
  
   {
     path: 'accessory',
     loadChildren: () => import('./accessory/accessory.module').then( m => m.AccessoryPageModule)
+  },
+  {
+    path: 'news',
+    loadChildren: () => import('./news/news.module').then( m => m.NewsPageModule)
+  },
+  {
+    path: 'to-do-list',
+    loadChildren: () => import('./to-do-list/to-do-list.module').then( m => m.ToDoListPageModule)
+  },
+  {
+    path: 'to-do-list',
+    loadChildren: () => import('./to-do-list/to-do-list.module').then( m => m.ToDoListPageModule)
   },
 ];
 

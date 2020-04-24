@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>news</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Danger back button next to a menu button -->
+<ion-header>
+  <ion-toolbar>
+    <!--this button will bring to the home page-->
+    <ion-buttons (click)="myAction()" href="../home">
+      <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- Danger back button next to a menu button -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="danger"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ul>
+    <li *ngFor="let story of NewsStories">
+
+      <h1>{{story.title}}</h1>
+      <h2>{{story.description}}</h2>
+      <h3>{{story.url}}</h3>
+      <p>{{story.publishedAt}}</p>
+      <p>{{story.content}}</p>
+    
+      <img height="250" width="400" src="{{story.urlToImage}}">
+
+    </li>
+  </ul>
+
+
+</ion-content>

@@ -1,21 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
  
+  <br><br> 
+  <div class="button"><ion-button class="size" size="large" shape="round" [routerLink]="['/news']">News</ion-button></div>
+  <br><br>
+  <div class="button"><ion-button class="size" size="large" shape="round" [routerLink]="['/accessory']">Accessory</ion-button></div>
+  <br><br>
+   <div class="button"><ion-button class="size" size="large" shape="round" [routerLink]="['/to-do-list']">To-do List</ion-button></div>
+  
 
-  <ul>
-    <li *ngFor="let story of NewsStories">
-
-      <h3>{{story.title}}</h3>
-      <p>{{story.content}}</p>
-      <img height="150" width="200" src="{{story.urlToImage}}">
-
-    </li>
-  </ul>
+  
 </ion-content>

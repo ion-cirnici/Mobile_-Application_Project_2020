@@ -1,3 +1,8 @@
+//background picture
+ion-content {
+  --background: #fff url("~/assets/icon/skyPic.jpg") no-repeat center center / cover;
+}
+
 #container {
   text-align: center;
 
@@ -6,6 +11,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  
 }
 
 #container strong {
@@ -29,3 +35,26 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+//all buttons centered
+ .ui-grid-solo {
+   text-align:center;
+   padding: 50px 50px;
+   
+
+  }
+
+  .button {
+    display: table;
+    margin: 0 auto;
+    border-radius: 4px;
+    margin-top: 27px;
+.size {
+    
+    letter-spacing: 2px;
+    width: 580px;
+    height: 120px;
+    display: block;
+    border-radius: 4px;
+}
+
+  }

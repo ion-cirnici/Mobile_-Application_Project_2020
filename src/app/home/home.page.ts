@@ -16,9 +16,11 @@ NewsStories:any
 ngOnInit() {
   this.newsService.GetLatestNewsStories().subscribe(
     (data)=>{
-      this.NewsStories = data.aricles;
+      this.NewsStories = data.articles;
     }
   );
 }
+public textColor: any;
+
 
 }

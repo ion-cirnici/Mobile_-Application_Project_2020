@@ -11,16 +11,26 @@ import { AppRoutingModule } from './app-routing.module';
 
 import {HttpClientModule} from'@angular/common/http';
 
+import { Flashlight } from '@ionic-native/flashlight/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
+import { IonicStorageModule } from '@ionic/storage';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+
+
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    HttpClientModule],
+    HttpClientModule, IonicStorageModule.forRoot()],
   providers: [
     StatusBar,
     SplashScreen,
+    Flashlight,
+    Camera,
+    SocialSharing,
+
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
